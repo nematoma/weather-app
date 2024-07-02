@@ -6,11 +6,14 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: #000001;
-  background-image: url('https://source.unsplash.com/1600x900/?weather');
+  background-image: url('images/sunny.png'); /* Default background */
   background-size: cover;
   font-size: 120%;
   color: #aeff7b;
 }
+
+/* Other styles */
+
 
 .card {
   background: rgba(0, 0, 0, 0.8);
