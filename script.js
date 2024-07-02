@@ -31,8 +31,20 @@ let weather = {
     document.querySelector(".wind").innerText =
       "Wind speed: " + speed + " km/h";
     document.querySelector(".weather").classList.remove("loading");
-    document.body.style.backgroundImage =
-      "url('https://source.unsplash.com/1600x900/?" + name + "')";
+
+    // Change background image based on weather description
+    let backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";
+    if (description.includes("clear")) {
+      backgroundImage = "url('weather/sunny.png')";
+    } else if (description.includes("rain")) {
+      backgroundImage = "url('weather/rainy.png')";
+    } else if (description.includes("cloud")) {
+      backgroundImage = "url('weather/cloudy.png')";
+    } else if (description.includes("haze")) {
+      backgroundImage = "url('weather/haze.png')";
+    }
+
+    document.body.style.backgroundImage = backgroundImage;
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
@@ -52,3 +64,4 @@ document
   });
 
 weather.fetchWeather("Delhi");
+
