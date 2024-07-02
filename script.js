@@ -33,16 +33,17 @@ let weather = {
     document.querySelector(".weather").classList.remove("loading");
 
     // Change background image based on weather description
-    let backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";
-    if (description.includes("clear")) {
-      backgroundImage = "url('weather/sunny.png')";
-    } else if (description.includes("rain")) {
-      backgroundImage = "url('weather/rainy.png')";
-    } else if (description.includes("cloud")) {
-      backgroundImage = "url('weather/cloudy.png')";
-    } else if (description.includes("haze")) {
-      backgroundImage = "url('weather/haze.png')";
-    }
+   let backgroundImage = "url('images/sunny.png')";
+if (description.includes("clear")) {
+  backgroundImage = "url('images/sunny.png')";
+} else if (description.includes("rain")) {
+  backgroundImage = "url('images/rainy.png')";
+} else if (description.includes("cloud")) {
+  backgroundImage = "url('images/cloudy.png')";
+} else if (description.includes("haze")) {
+  backgroundImage = "url('images/haze.png')";
+}
+
 
     document.body.style.backgroundImage = backgroundImage;
   },
