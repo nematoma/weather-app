@@ -33,15 +33,15 @@ let weather = {
     document.querySelector(".weather").classList.remove("loading");
 
     // Change background image based on weather description
-   let backgroundImage = "url('images/sunny.png')";
+   let backgroundImage = "url('./weather/sunny.png')";
 if (description.includes("clear")) {
-  backgroundImage = "url('images/sunny.png')";
+  backgroundImage = "url('./weather/sunny.png')";
 } else if (description.includes("rain")) {
-  backgroundImage = "url('images/rainy.png')";
+  backgroundImage = "url('./weather/rainy.png')";
 } else if (description.includes("cloud")) {
-  backgroundImage = "url('images/cloudy.png')";
+  backgroundImage = "url('./weather/cloudy.png')";
 } else if (description.includes("haze")) {
-  backgroundImage = "url('images/haze.png')";
+  backgroundImage = "url('./weather/haze.png')";
 }
 
 
