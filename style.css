@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: #000001;
-  background-image: url('images/sunny.png'); /* Default background */
+  background-image: url('./weather/sunny.png'); /* Default background */
   background-size: cover;
   font-size: 120%;
   color: #aeff7b;
